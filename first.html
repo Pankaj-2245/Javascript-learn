@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayDate(){
+            document.getElementById('displayDate').innerHTML=Date();
+            document.getElementById('title').innerHTML='hello javascript!!';
+            
+        }
+        function addition(){
+            num1=10;
+            num2=20;
+            num3=num1+num2;
+            string1="hello";
+            append=num1+string1;
+            document.getElementById('displaysum').innerHTML="Sum of two numbers is: "+num3;
+            document.getElementById('display').innerHTML="The appended string is: "+append;
+        }
+
+        function subtraction(){
+            const num1=10;
+            let num2=20;
+            let sub=num1-num2;
+            window.alert("Subtraction of two numbers is: "+sub);
+        }
+
+        function multiplication(){
+            var num1=10;
+            var num2=20;
+            let mul=num1*num2;
+            window.alert("Multiplication of two numbers is: "+mul);
+        }
+    </script>
+
+    
+</head>
+<body>
+    <h1 id="title">Hello html</h1>
+    <p id="currentdate"></p>
+    <button type="button" onclick="document.getElementById('title').innerHTML='hello javascript!!'">Click me</button>
+    <button type="button" onclick="document.getElementById('currentdate').innerHTML=Date()">Current date</button>
+    
+   
+    <p id="displayDate"></p>
+    <button type="button" onclick="displayDate()">Click me</button>
+   
+    <p id="displaysum">Sum</p>
+    <button type="button" onclick="addition()">add</button>
+    <p id="display"></p>
+    <button type="button" onclick="addition()">Append</button>
+    <button type="button" onclick="subtraction()">Subtract</button>
+    <button type="button" onclick="multiplication()">Multiply</button>
+   
+   
+   
+</body>
+</html>
