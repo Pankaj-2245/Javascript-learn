@@ -33,6 +33,42 @@
             let mul=num1*num2;
             window.alert("Multiplication of two numbers is: "+mul);
         }
+        function jsloop()
+        {
+            const arr=['one', 'two', 'three', 'four' ,'five' ,'six'];
+            for (let i=0; i<6;i++)
+            {
+                console.log('The index is $(i) & value is  $(arr[i])');
+
+            }
+            let count=0;
+            while(count<3)
+            {
+                console.log('Count' +count);
+                count++;
+            }
+            let count1=1;
+            do{
+                console.log('Count in do while' +count1);
+                count++;
+
+            }while(count<1);
+
+            const numbers=[1,2,3,4,5,6,7,8,9];
+            for (const number of numbers)
+            {
+                console.log('The values are'+number)
+            }
+            const person ={
+                firstname: 'Ravi',
+                lastname: 'Sharma',
+                age:25,
+                experience:25,
+                address: "Bhaktapur- 1 Nepal",
+
+
+            };
+        }
     </script>
 
     
@@ -53,6 +89,7 @@
     <button type="button" onclick="addition()">Append</button>
     <button type="button" onclick="subtraction()">Subtract</button>
     <button type="button" onclick="multiplication()">Multiply</button>
+    <button type="button" onclick="jsloop()">jsloop</button>
    
    
    
