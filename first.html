@@ -60,15 +60,61 @@
                 console.log('The values are'+number)
             }
             const person ={
-                firstname: 'Ravi',
-                lastname: 'Sharma',
+                firstname: "Ravi",
+                lastname: "Sharma",
                 age:25,
                 experience:25,
                 address: "Bhaktapur- 1 Nepal",
 
 
             };
+            console.log(person.firstname);
+                   
+            
+            
         }
+        function loops(){
+            const object={
+                name: "Pankaj",
+                age: 20,
+                address: "Kathmandu",
+                class: "Bsc.CSIT",
+                section: 'B',
+                hobbies: ['reading', 'writing', 'coding', 'playing'],
+            };
+
+            
+            console.log(object)
+            for(let hobby of object.hobbies){
+                console.log(hobby);
+
+            }
+            object.hobbies.push('singing');
+
+            console.log(object.hobbies);
+
+            let subhoppies=object.hobbies.sort();
+            console.log(subhoppies);
+
+            let slicedhobbies=object.hobbies.slice(0,2);
+            console.log(slicedhobbies);
+
+            const personAddress={
+                country:"Nepal",
+                state:"Bagmati",
+                city:"Kathmandu",
+                address:{
+                    homeaddress:"Lokanthali",
+                    pincode:44600,
+                }
+
+            };
+            console.log(personAddress['address']);
+            
+
+        }
+        
+
     </script>
 
     
@@ -90,6 +136,8 @@
     <button type="button" onclick="subtraction()">Subtract</button>
     <button type="button" onclick="multiplication()">Multiply</button>
     <button type="button" onclick="jsloop()">jsloop</button>
+    <button type="button" onclick="loops()">loops</button>
+   
    
    
    
