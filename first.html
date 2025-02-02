@@ -99,20 +99,83 @@
             let slicedhobbies=object.hobbies.slice(0,2);
             console.log(slicedhobbies);
 
+            const {name,age,address}=object;
+            console.log(name);
+            console.log(`The name is: ${name} and age is: ${age} and address is: ${address}`);
+
+            const {id,college,...personalAddress}=object;
+            console.log(id);
+            console.log(college);
+            console.log(personalAddress);
+
+            const number_s=[1,2,3,4,5];
+            const [first,second,third,fourth,fifth]=number_s;
+            console.log(second);
+
             const personAddress={
                 country:"Nepal",
                 state:"Bagmati",
                 city:"Kathmandu",
                 address:{
                     homeaddress:"Lokanthali",
-                    pincode:44600,lll
+                    pincode:44600,
                 }
 
             };
             console.log(personAddress['address']);
-            
-
         }
+        function testingthiskeyword(){
+           const video={
+               title: 'Video title',
+               description: 'Video description',
+               views: 100, 
+               play()
+                {
+                     console.log(this);
+                }
+           };
+              video.play();
+              video.pause=function(){
+                  console.log(this);
+              }
+                video.pause();
+
+                //constructor function
+                function Video(title,description,views){
+                    this.title=title;
+                    this.description=description;
+                    this.views=views;
+                    console.log(this);
+                   
+                }
+                new Video('Sample Title','Sample Description',1000);
+
+                const user={
+                    name:'Alex'
+                }
+                function sayHello(){
+                    console.log(`Hello ${this.name }`);
+                }
+                sayHello.call(user);
+
+                const Samriddhicollege={
+                    name:'Samriddhi College',
+                    showdetails: function(location, phone){
+                        console.log(`College name: ${this.name}, location: ${location}, phone: ${phone}`);
+
+                    }
+                   
+                    }
+
+                    const partnercollege={
+                        name:'Sikshyalaya college',
+                    }
+                
+                    Samriddhicollege.showdetails.call(partnercollege,'lokanthali', '01222345');
+                    Samriddhicollege.showdetails.apply(partnercollege, ['bhaktapur', '9815234567']);
+                
+        }
+
         
 
     </script>
@@ -137,6 +200,8 @@
     <button type="button" onclick="multiplication()">Multiply</button>
     <button type="button" onclick="jsloop()">jsloop</button>
     <button type="button" onclick="loops()">loops</button>
+    <h2>Testing this keyword</h2>
+    <button type="button" onclick="testingthiskeyword()">THIS_KEYWORD</button>
    
    
    
