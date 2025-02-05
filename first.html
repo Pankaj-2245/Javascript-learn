@@ -173,7 +173,87 @@
                 
                     Samriddhicollege.showdetails.call(partnercollege,'lokanthali', '01222345');
                     Samriddhicollege.showdetails.apply(partnercollege, ['bhaktapur', '9815234567']);
-                
+
+                    class Person{
+                        constructor(name,batch,age,year){
+                            this.name=name;
+                            this.batch=batch;
+                            this.age=age;
+                            this.year=year;
+
+                        }
+                        showDetails(){
+                            console.log(`Hello I am ${this.name}.I am ${this.age} years old and studying in ${this.year} amd ${this.batch}`)
+                        }
+                    }
+                    const person1=new Person('Ravi', 2080, 20, 2081);
+                    person1.showDetails();
+
+
+                    //Implementing inheritance in javascript
+
+                    class Student extends Person {
+                        constructor (name,batch,age,year,rollnumber){
+                            super(name,batch,age,year); //calling parent class constructor
+                            this.rollnumber=rollnumber;
+                        }
+
+                        getstudentDetails(){
+                            console.log(`Hi! I am ${this.name}. I am ${this.age} years old `);
+                            console.log(`I am currently studying in ${this.year} and ${this.batch} batch and my roll number is ${this.rollnumber}`);
+                        }
+
+                        showDetails(){
+                            console.log(`Hello I am ${this.name}.I am from ${this.batch} batch`);
+                            super.showDetails();
+                        }
+
+                    }
+                    const student1=new Student('Vishal', 2078, 20, 2079, 12);
+                    student1.getstudentDetails();
+                    student1.showDetails();
+
+
+                    student1.checkDetails=function(){
+                        console.log(`Checking details of ${this.name}`);
+                    }
+                    student1.checkDetails();
+
+                    class MathUtils{
+                        static add(num1,num2){
+                            let sum=num1+num2;
+                            return sum;
+                        }
+                    }
+
+                    const sum=MathUtils.add(10,20);
+                    console.log(`The sum is ${sum}`);
+
+
+                    class Circle{
+                        constructor(radius){
+                            this._radius=radius;  //_radius is private variable
+                        }
+                        get radius(){
+                            return this._radius;
+                        }
+
+                        set setRadius(radius){
+                            if(radius>0){
+                                this._radius=radius;
+                            }
+                            else{
+                                console.log('Invalid radius');
+                            }
+                        }
+
+                       
+                    }
+
+                    const circle1=new Circle(10);
+                    console.log(circle1.radius);
+                    circle1.setRadius=20;
+                    console.log(circle1.radius);
         }
 
         
