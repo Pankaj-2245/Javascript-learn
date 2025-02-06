@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="script.js" type="module"></script>
     <script>
         function displayDate(){
             document.getElementById('displayDate').innerHTML=Date();
@@ -254,8 +255,28 @@
                     console.log(circle1.radius);
                     circle1.setRadius=20;
                     console.log(circle1.radius);
-        }
 
+                    //Implementing private variables in javascript
+
+                    class Retangle{
+                        #length;
+                        #breadth;
+              
+                        constructor(length,breadth,height){
+                          this.#length=length;
+                          this.#breadth=breadth;
+                          this.height=height;
+                        }
+              
+                        getArea(){
+                          return this.#breadth*this.#length;
+                        }
+                    }
+              
+                      const rectangle = new Retangle(10,20);
+                      console.log(rectangle.getArea());
+
+          } 
         
 
     </script>
